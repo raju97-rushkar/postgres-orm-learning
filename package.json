@@ -1,0 +1,52 @@
+{
+  "name": "postgres-orm-learning",
+  "version": "1.0.0",
+  "description": "Learn PostgreSQL + Sequelize ORM step by step using a small online shop database",
+  "main": "src/models/index.js",
+  "scripts": {
+    "db:create": "sequelize-cli db:create",
+    "db:drop": "sequelize-cli db:drop",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:status": "sequelize-cli db:migrate:status",
+    "db:migrate:undo": "sequelize-cli db:migrate:undo",
+    "db:migrate:undo:all": "sequelize-cli db:migrate:undo:all",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:seed:undo": "sequelize-cli db:seed:undo:all",
+    "db:reset": "sequelize-cli db:migrate:undo:all && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "setup": "sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "lesson:1": "node lessons/01-connection.js",
+    "lesson:2": "node lessons/02-crud.js",
+    "lesson:3": "node lessons/03-associations.js",
+    "lesson:4": "node lessons/04-queries.js",
+    "lesson:5": "node lessons/05-transactions.js",
+    "lesson:6": "node lessons/06-functions.js",
+    "lesson:7": "node lessons/07-procedures.js",
+    "lesson:8": "node lessons/08-triggers.js",
+    "lesson:9": "node lessons/09-indexing.js",
+    "lesson:10": "node lessons/10-advanced-queries.js",
+    "lesson:11": "node lessons/11-performance.js",
+    "lesson:12": "node lessons/12-advanced-transactions.js",
+    "lesson:13": "node lessons/13-constraints-validations.js",
+    "dummy": "node lessons/add-dummy-data.js"
+  },
+  "keywords": [
+    "postgresql",
+    "sequelize",
+    "orm",
+    "learning"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "pg": "^8.23.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.5"
+  }
+}
